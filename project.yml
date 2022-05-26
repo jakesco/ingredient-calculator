@@ -1,0 +1,5 @@
+packages:
+  - name: calculator
+    actions:
+      - name: contexts
+      - name: convert
