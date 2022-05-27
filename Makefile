@@ -9,7 +9,7 @@ init:
 	pip install black isort
 
 deploy:
-	doctl serverless deploy .
+	doctl serverless deploy . --remote-build
 
 undeploy:
 	doctl serverless undeploy --all

@@ -32,343 +32,377 @@
 
 <body>
 <main class="container">
-  <h1>Ingredient Calculator</h1>
 
-  <article aria-label="Unit conversion calculator.">
+  <div class="flex third">
+    <article class="card" aria-label="Unit conversion calculator.">
+      <header>
+        <h1>Ingredient Calculator</h1>
+      </header>
 
-    <form action="#" method="POST">
-      <label for="context"><strong>Ingredient type:</strong>
-        <select id="context" name="context">
-          <option value="Water (contexts)" selected>Water (contexts)</option>
-          <option value="All-Purpose Flour">All-Purpose Flour</option>
-          <option value="Almond Flour">Almond Flour</option>
-          <option value="Almond meal">Almond meal</option>
-          <option value="Almond paste (packed)">Almond paste (packed)</option>
-          <option value="Almonds (sliced)">Almonds (sliced)</option>
-          <option value="Almonds (slivered)">Almonds (slivered)</option>
-          <option value="Almonds, whole (unblanched)">Almonds, whole (unblanched)</option>
-          <option value="Amaranth flour">Amaranth flour</option>
-          <option value="Apple juice concentrate">Apple juice concentrate</option>
-          <option value="Apples (dried, diced)">Apples (dried, diced)</option>
-          <option value="Apples (peeled, sliced)">Apples (peeled, sliced)</option>
-          <option value="Applesauce">Applesauce</option>
-          <option value="Apricots (dried, diced)">Apricots (dried, diced)</option>
-          <option value="Artisan Bread Flour">Artisan Bread Flour</option>
-          <option value="Artisan Bread Topping">Artisan Bread Topping</option>
-          <option value="Baker's Cinnamon Filling">Baker's Cinnamon Filling</option>
-          <option value="Baker's Fruit Blend">Baker's Fruit Blend</option>
-          <option value="Baker's Special Sugar (superfine sugar, castor sugar)">Baker's Special Sugar (superfine sugar, castor sugar)</option>
-          <option value="Baking powder">Baking powder</option>
-          <option value="Baking soda">Baking soda</option>
-          <option value="Baking Sugar Alternative">Baking Sugar Alternative</option>
-          <option value="Bananas (mashed)">Bananas (mashed)</option>
-          <option value="Barley (cooked)">Barley (cooked)</option>
-          <option value="Barley (pearled)">Barley (pearled)</option>
-          <option value="Barley flakes">Barley flakes</option>
-          <option value="Barley flour">Barley flour</option>
-          <option value="Barley malt syrup">Barley malt syrup</option>
-          <option value="Basil pesto">Basil pesto</option>
-          <option value="Bell peppers (fresh)">Bell peppers (fresh)</option>
-          <option value="Berries (frozen)">Berries (frozen)</option>
-          <option value="Blueberries (dried)">Blueberries (dried)</option>
-          <option value="Blueberries (fresh)">Blueberries (fresh)</option>
-          <option value="Blueberry juice">Blueberry juice</option>
-          <option value="Boiled cider">Boiled cider</option>
-          <option value="Bran cereal">Bran cereal</option>
-          <option value="Bread crumbs (dried)">Bread crumbs (dried)</option>
-          <option value="Bread crumbs (fresh)">Bread crumbs (fresh)</option>
-          <option value="Bread crumbs (Japanese Panko)">Bread crumbs (Japanese Panko)</option>
-          <option value="Bread Flour">Bread Flour</option>
-          <option value="Brown rice (cooked)">Brown rice (cooked)</option>
-          <option value="Brown rice flour">Brown rice flour</option>
-          <option value="Brown sugar (dark or light, packed)">Brown sugar (dark or light, packed)</option>
-          <option value="Buckwheat (whole)">Buckwheat (whole)</option>
-          <option value="Buckwheat Flour">Buckwheat Flour</option>
-          <option value="Bulgur">Bulgur</option>
-          <option value="Butter">Butter</option>
-          <option value="Buttermilk">Buttermilk</option>
-          <option value="Buttermilk powder">Buttermilk powder</option>
-          <option value="Cacao nibs">Cacao nibs</option>
-          <option value="Cake Enhancer">Cake Enhancer</option>
-          <option value="Candied peel">Candied peel</option>
-          <option value="Caramel (14-16 individual pieces, 1in squares)">Caramel (14-16 individual pieces, 1in squares)</option>
-          <option value="Caramel bits (chopped Heath or toffee)">Caramel bits (chopped Heath or toffee)</option>
-          <option value="Caraway seeds">Caraway seeds</option>
-          <option value="Carrots (cooked and puréed)">Carrots (cooked and puréed)</option>
-          <option value="Carrots (diced)">Carrots (diced)</option>
-          <option value="Carrots (grated)">Carrots (grated)</option>
-          <option value="Cashews (chopped)">Cashews (chopped)</option>
-          <option value="Cashews (whole)">Cashews (whole)</option>
-          <option value="Celery (diced)">Celery (diced)</option>
-          <option value="Cheese (Feta)">Cheese (Feta)</option>
-          <option value="Cheese (grated cheddar, jack, mozzarella, or Swiss)">Cheese (grated cheddar, jack, mozzarella, or Swiss)</option>
-          <option value="Cheese (grated Parmesan)">Cheese (grated Parmesan)</option>
-          <option value="Cheese (Ricotta)">Cheese (Ricotta)</option>
-          <option value="Cherries (candied)">Cherries (candied)</option>
-          <option value="Cherries (dried)">Cherries (dried)</option>
-          <option value="Cherries (fresh, pitted, chopped)">Cherries (fresh, pitted, chopped)</option>
-          <option value="Cherries (frozen)">Cherries (frozen)</option>
-          <option value="Cherry Concentrate">Cherry Concentrate</option>
-          <option value="Chickpea flour">Chickpea flour</option>
-          <option value="Chives (fresh)">Chives (fresh)</option>
-          <option value="Chocolate (chopped)">Chocolate (chopped)</option>
-          <option value="Chocolate Chips">Chocolate Chips</option>
-          <option value="Chocolate Chunks">Chocolate Chunks</option>
-          <option value="Cinnamon Sweet Bits">Cinnamon Sweet Bits</option>
-          <option value="Cinnamon-Sugar">Cinnamon-Sugar</option>
-          <option value="Cocoa (unsweetened)">Cocoa (unsweetened)</option>
-          <option value="Coconut (sweetened, shredded)">Coconut (sweetened, shredded)</option>
-          <option value="Coconut (toasted)">Coconut (toasted)</option>
-          <option value="Coconut (unsweetened, desiccated)">Coconut (unsweetened, desiccated)</option>
-          <option value="Coconut (unsweetened, large flakes)">Coconut (unsweetened, large flakes)</option>
-          <option value="Coconut (unsweetened, shredded)">Coconut (unsweetened, shredded)</option>
-          <option value="Coconut Flour">Coconut Flour</option>
-          <option value="Coconut Milk Powder">Coconut Milk Powder</option>
-          <option value="Coconut oil">Coconut oil</option>
-          <option value="Coconut sugar">Coconut sugar</option>
-          <option value="Confectioners' sugar (unsifted)">Confectioners' sugar (unsifted)</option>
-          <option value="Cookie crumbs">Cookie crumbs</option>
-          <option value="Corn (popped)">Corn (popped)</option>
-          <option value="Corn syrup">Corn syrup</option>
-          <option value="Cornmeal (whole)">Cornmeal (whole)</option>
-          <option value="Cornmeal (yellow, Quaker)">Cornmeal (yellow, Quaker)</option>
-          <option value="Cornstarch">Cornstarch</option>
-          <option value="Cracked wheat">Cracked wheat</option>
-          <option value="Cranberries (dried)">Cranberries (dried)</option>
-          <option value="Cranberries (fresh or frozen)">Cranberries (fresh or frozen)</option>
-          <option value="Cream (heavy cream, light cream, or half & half)">Cream (heavy cream, light cream, or half & half)</option>
-          <option value="Cream cheese">Cream cheese</option>
-          <option value="Crystallized ginger">Crystallized ginger</option>
-          <option value="Currants">Currants</option>
-          <option value="Dates (chopped)">Dates (chopped)</option>
-          <option value="Demerara sugar">Demerara sugar</option>
-          <option value="Dried Blueberry Powder">Dried Blueberry Powder</option>
-          <option value="Dried milk (Baker's Special Dry Milk)">Dried milk (Baker's Special Dry Milk)</option>
-          <option value="Dried nonfat milk (powdered)">Dried nonfat milk (powdered)</option>
-          <option value="Dried potato flakes (instant mashed potatoes)">Dried potato flakes (instant mashed potatoes)</option>
-          <option value="Dried whole milk (powdered)">Dried whole milk (powdered)</option>
-          <option value="Durum Flour">Durum Flour</option>
-          <option value="Easy Roll Dough Improver">Easy Roll Dough Improver</option>
-          <option value="Egg (fresh)">Egg (fresh)</option>
-          <option value="Egg white (fresh)">Egg white (fresh)</option>
-          <option value="Egg whites (dried)">Egg whites (dried)</option>
-          <option value="Egg yolk (fresh)">Egg yolk (fresh)</option>
-          <option value="Espresso Powder">Espresso Powder</option>
-          <option value="Everything Bagel Topping">Everything Bagel Topping</option>
-          <option value="Figs (dried, chopped)">Figs (dried, chopped)</option>
-          <option value="First Clear Flour">First Clear Flour</option>
-          <option value="Flax meal">Flax meal</option>
-          <option value="Flaxseed">Flaxseed</option>
-          <option value="French-Style Flour">French-Style Flour</option>
-          <option value="Fruitcake Fruit Blend">Fruitcake Fruit Blend</option>
-          <option value="Garlic (cloves, in skin for roasting)">Garlic (cloves, in skin for roasting)</option>
-          <option value="Garlic (minced)">Garlic (minced)</option>
-          <option value="Garlic (peeled and sliced)">Garlic (peeled and sliced)</option>
-          <option value="Ginger (fresh, sliced)">Ginger (fresh, sliced)</option>
-          <option value="Gluten-Free All-Purpose Baking Mix">Gluten-Free All-Purpose Baking Mix</option>
-          <option value="Gluten-Free All-Purpose Flour">Gluten-Free All-Purpose Flour</option>
-          <option value="Gluten-Free Measure for Measure Flour">Gluten-Free Measure for Measure Flour</option>
-          <option value="Graham cracker crumbs (boxed)">Graham cracker crumbs (boxed)</option>
-          <option value="Graham crackers (crushed)">Graham crackers (crushed)</option>
-          <option value="Granola">Granola</option>
-          <option value="Grape Nuts">Grape Nuts</option>
-          <option value="Harvest Grains Blend">Harvest Grains Blend</option>
-          <option value="Hazelnut flour">Hazelnut flour</option>
-          <option value="Hazelnut Praline Paste">Hazelnut Praline Paste</option>
-          <option value="Hazelnut spread">Hazelnut spread</option>
-          <option value="Hazelnuts (whole)">Hazelnuts (whole)</option>
-          <option value="Hi-Maize Natural Fiber">Hi-Maize Natural Fiber</option>
-          <option value="High-Gluten Flour">High-Gluten Flour</option>
-          <option value="Honey">Honey</option>
-          <option value="Instant ClearJel">Instant ClearJel</option>
-          <option value="Irish-Style Flour">Irish-Style Flour</option>
-          <option value="Italian-Style Flour">Italian-Style Flour</option>
-          <option value="Jam or preserves">Jam or preserves</option>
-          <option value="Jammy Bits">Jammy Bits</option>
-          <option value="Keto Wheat Flour">Keto Wheat Flour</option>
-          <option value="Key Lime Juice">Key Lime Juice</option>
-          <option value="Lard">Lard</option>
-          <option value="Leeks (diced)">Leeks (diced)</option>
-          <option value="Lemon Juice Powder">Lemon Juice Powder</option>
-          <option value="Lime Juice Powder">Lime Juice Powder</option>
-          <option value="Macadamia nuts (whole)">Macadamia nuts (whole)</option>
-          <option value="Malt syrup">Malt syrup</option>
-          <option value="Malted Milk Powder">Malted Milk Powder</option>
-          <option value="Malted Wheat Flakes">Malted Wheat Flakes</option>
-          <option value="Maple sugar">Maple sugar</option>
-          <option value="Maple syrup">Maple syrup</option>
-          <option value="Marshmallow crème">Marshmallow crème</option>
-          <option value="Marshmallow Fluff®">Marshmallow Fluff®</option>
-          <option value="Marshmallows (mini)">Marshmallows (mini)</option>
-          <option value="Marzipan">Marzipan</option>
-          <option value="Mascarpone cheese">Mascarpone cheese</option>
-          <option value="Mashed potatoes">Mashed potatoes</option>
-          <option value="Mayonnaise">Mayonnaise</option>
-          <option value="Medium Rye Flour">Medium Rye Flour</option>
-          <option value="Meringue powder">Meringue powder</option>
-          <option value="Milk (evaporated)">Milk (evaporated)</option>
-          <option value="Milk (fresh)">Milk (fresh)</option>
-          <option value="Millet (whole)">Millet (whole)</option>
-          <option value="Mini chocolate chips">Mini chocolate chips</option>
-          <option value="Molasses">Molasses</option>
-          <option value="Mushrooms (sliced)">Mushrooms (sliced)</option>
-          <option value="Non-Diastatic Malt Powder">Non-Diastatic Malt Powder</option>
-          <option value="Oat bran">Oat bran</option>
-          <option value="Oat flour">Oat flour</option>
-          <option value="Oats (old-fashioned or quick-cooking)">Oats (old-fashioned or quick-cooking)</option>
-          <option value="Olive oil">Olive oil</option>
-          <option value="Olives (sliced)">Olives (sliced)</option>
-          <option value="Onions (fresh, diced)">Onions (fresh, diced)</option>
-          <option value="Paleo Baking Flour">Paleo Baking Flour</option>
-          <option value="Palm shortening">Palm shortening</option>
-          <option value="Passion fruit purée ">Passion fruit purée </option>
-          <option value="Pasta Flour Blend">Pasta Flour Blend</option>
-          <option value="Pastry Flour">Pastry Flour</option>
-          <option value="Pastry Flour Blend">Pastry Flour Blend</option>
-          <option value="Peaches (peeled and diced)">Peaches (peeled and diced)</option>
-          <option value="Peanut butter">Peanut butter</option>
-          <option value="Peanuts (whole, shelled)">Peanuts (whole, shelled)</option>
-          <option value="Pears (peeled and diced)">Pears (peeled and diced)</option>
-          <option value="Pecan Meal">Pecan Meal</option>
-          <option value="Pecans (diced)">Pecans (diced)</option>
-          <option value="Pie Filling Enhancer">Pie Filling Enhancer</option>
-          <option value="Pine nuts">Pine nuts</option>
-          <option value="Pineapple (dried)">Pineapple (dried)</option>
-          <option value="Pineapple (fresh or canned, diced)">Pineapple (fresh or canned, diced)</option>
-          <option value="Pistachio nuts (shelled)">Pistachio nuts (shelled)</option>
-          <option value="Pistachio Paste">Pistachio Paste</option>
-          <option value="Pizza Dough Flavor">Pizza Dough Flavor</option>
-          <option value="Pizza Flour">Pizza Flour</option>
-          <option value="Pizza Flour Blend">Pizza Flour Blend</option>
-          <option value="Polenta (coarse ground cornmeal)">Polenta (coarse ground cornmeal)</option>
-          <option value="Poppy seeds">Poppy seeds</option>
-          <option value="Potato Flour">Potato Flour</option>
-          <option value="Potato starch">Potato starch</option>
-          <option value="Pumpernickel Flour">Pumpernickel Flour</option>
-          <option value="Pumpkin purée ">Pumpkin purée </option>
-          <option value="Quinoa (cooked)">Quinoa (cooked)</option>
-          <option value="Quinoa (whole)">Quinoa (whole)</option>
-          <option value="Quinoa flour">Quinoa flour</option>
-          <option value="Raisins (loose)">Raisins (loose)</option>
-          <option value="Raisins (packed)">Raisins (packed)</option>
-          <option value="Raspberries (fresh)">Raspberries (fresh)</option>
-          <option value="Rhubarb (sliced, 1/2in slices)">Rhubarb (sliced, 1/2in slices)</option>
-          <option value="Rice (long grain, dry)">Rice (long grain, dry)</option>
-          <option value="Rice flour (white)">Rice flour (white)</option>
-          <option value="Rice Krispies">Rice Krispies</option>
-          <option value="Rye Bread Improver">Rye Bread Improver</option>
-          <option value="Rye Chops">Rye Chops</option>
-          <option value="Rye flakes">Rye flakes</option>
-          <option value="Rye Flour Blend">Rye Flour Blend</option>
-          <option value="Salt (Kosher, Diamond Crystal)">Salt (Kosher, Diamond Crystal)</option>
-          <option value="Salt (Kosher, Morton's)">Salt (Kosher, Morton's)</option>
-          <option value="Salt (table)">Salt (table)</option>
-          <option value="Scallions (sliced)">Scallions (sliced)</option>
-          <option value="Self-Rising Flour">Self-Rising Flour</option>
-          <option value="Semolina Flour">Semolina Flour</option>
-          <option value="Sesame seeds">Sesame seeds</option>
-          <option value="Shallots (peeled and sliced)">Shallots (peeled and sliced)</option>
-          <option value="Six-Grain Blend">Six-Grain Blend</option>
-          <option value="Sorghum flour">Sorghum flour</option>
-          <option value="Sour cream">Sour cream</option>
-          <option value="Sourdough starter">Sourdough starter</option>
-          <option value="Soy flour">Soy flour</option>
-          <option value="Sparkling Sugar">Sparkling Sugar</option>
-          <option value="Spelt Flour">Spelt Flour</option>
-          <option value="Sprouted Wheat Flour">Sprouted Wheat Flour</option>
-          <option value="Steel cut oats">Steel cut oats</option>
-          <option value="Sticky Bun Sugar">Sticky Bun Sugar</option>
-          <option value="Strawberries (fresh sliced)">Strawberries (fresh sliced)</option>
-          <option value="Sugar (granulated white)">Sugar (granulated white)</option>
-          <option value="Sugar substitute (Splenda)">Sugar substitute (Splenda)</option>
-          <option value="Sundried tomatoes (dry pack)">Sundried tomatoes (dry pack)</option>
-          <option value="Sunflower seeds">Sunflower seeds</option>
-          <option value="Super 10 Blend">Super 10 Blend</option>
-          <option value="Sweet Ground Chocolate and Cocoa Blend">Sweet Ground Chocolate and Cocoa Blend</option>
-          <option value="Sweetened condensed milk">Sweetened condensed milk</option>
-          <option value="Tahini paste">Tahini paste</option>
-          <option value="Tapioca starch or flour">Tapioca starch or flour</option>
-          <option value="Tapioca (quick cooking)">Tapioca (quick cooking)</option>
-          <option value="Teff flour">Teff flour</option>
-          <option value="The Works Bread Topping">The Works Bread Topping</option>
-          <option value="Toasted Almond Flour">Toasted Almond Flour</option>
-          <option value="Toffee chunks">Toffee chunks</option>
-          <option value="Tropical Fruit Blend">Tropical Fruit Blend</option>
-          <option value="Turbinado sugar (raw)">Turbinado sugar (raw)</option>
-          <option value="Unbleached Cake Flour">Unbleached Cake Flour</option>
-          <option value="Vanilla Extract ">Vanilla Extract </option>
-          <option value="Vegetable oil">Vegetable oil</option>
-          <option value="Vegetable shortening">Vegetable shortening</option>
-          <option value="Vermont Cheese Powder">Vermont Cheese Powder</option>
-          <option value="Vital Wheat Gluten">Vital Wheat Gluten</option>
-          <option value="Walnuts (chopped)">Walnuts (chopped)</option>
-          <option value="Walnuts (whole)">Walnuts (whole)</option>
-          <option value="Wheat berries (red)">Wheat berries (red)</option>
-          <option value="Wheat bran">Wheat bran</option>
-          <option value="Wheat germ">Wheat germ</option>
-          <option value="White Chocolate Chips">White Chocolate Chips</option>
-          <option value="White Rye Flour">White Rye Flour</option>
-          <option value="White Whole Wheat Flour">White Whole Wheat Flour</option>
-          <option value="Whole Grain Flour Blend">Whole Grain Flour Blend</option>
-          <option value="Whole Wheat Flour (Premium 100%)">Whole Wheat Flour (Premium 100%)</option>
-          <option value="Whole Wheat Pastry Flour / Graham Flour">Whole Wheat Pastry Flour / Graham Flour</option>
-          <option value="Yeast (instant)">Yeast (instant)</option>
-          <option value="Yogurt">Yogurt</option>
-          <option value="Zucchini (shredded)">Zucchini (shredded)</option>
-        </select>
-      </label>
+      <form id="convertForm"
+            action="https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-ebca009b-bebb-49c4-83df-cf0b798f1ad6/calculator/convert"
+            method="POST">
+        <label for="context"><strong>Ingredient type:</strong>
+          <select id="context" name="context">
+            <option value="Water (contexts)" selected>Water (contexts)</option>
+            <option value="All-Purpose Flour">All-Purpose Flour</option>
+            <option value="Almond Flour">Almond Flour</option>
+            <option value="Almond meal">Almond meal</option>
+            <option value="Almond paste (packed)">Almond paste (packed)</option>
+            <option value="Almonds (sliced)">Almonds (sliced)</option>
+            <option value="Almonds (slivered)">Almonds (slivered)</option>
+            <option value="Almonds, whole (unblanched)">Almonds, whole (unblanched)</option>
+            <option value="Amaranth flour">Amaranth flour</option>
+            <option value="Apple juice concentrate">Apple juice concentrate</option>
+            <option value="Apples (dried, diced)">Apples (dried, diced)</option>
+            <option value="Apples (peeled, sliced)">Apples (peeled, sliced)</option>
+            <option value="Applesauce">Applesauce</option>
+            <option value="Apricots (dried, diced)">Apricots (dried, diced)</option>
+            <option value="Artisan Bread Flour">Artisan Bread Flour</option>
+            <option value="Artisan Bread Topping">Artisan Bread Topping</option>
+            <option value="Baker's Cinnamon Filling">Baker's Cinnamon Filling</option>
+            <option value="Baker's Fruit Blend">Baker's Fruit Blend</option>
+            <option value="Baker's Special Sugar (superfine sugar, castor sugar)">Baker's Special Sugar (superfine sugar, castor sugar)</option>
+            <option value="Baking powder">Baking powder</option>
+            <option value="Baking soda">Baking soda</option>
+            <option value="Baking Sugar Alternative">Baking Sugar Alternative</option>
+            <option value="Bananas (mashed)">Bananas (mashed)</option>
+            <option value="Barley (cooked)">Barley (cooked)</option>
+            <option value="Barley (pearled)">Barley (pearled)</option>
+            <option value="Barley flakes">Barley flakes</option>
+            <option value="Barley flour">Barley flour</option>
+            <option value="Barley malt syrup">Barley malt syrup</option>
+            <option value="Basil pesto">Basil pesto</option>
+            <option value="Bell peppers (fresh)">Bell peppers (fresh)</option>
+            <option value="Berries (frozen)">Berries (frozen)</option>
+            <option value="Blueberries (dried)">Blueberries (dried)</option>
+            <option value="Blueberries (fresh)">Blueberries (fresh)</option>
+            <option value="Blueberry juice">Blueberry juice</option>
+            <option value="Boiled cider">Boiled cider</option>
+            <option value="Bran cereal">Bran cereal</option>
+            <option value="Bread crumbs (dried)">Bread crumbs (dried)</option>
+            <option value="Bread crumbs (fresh)">Bread crumbs (fresh)</option>
+            <option value="Bread crumbs (Japanese Panko)">Bread crumbs (Japanese Panko)</option>
+            <option value="Bread Flour">Bread Flour</option>
+            <option value="Brown rice (cooked)">Brown rice (cooked)</option>
+            <option value="Brown rice flour">Brown rice flour</option>
+            <option value="Brown sugar (dark or light, packed)">Brown sugar (dark or light, packed)</option>
+            <option value="Buckwheat (whole)">Buckwheat (whole)</option>
+            <option value="Buckwheat Flour">Buckwheat Flour</option>
+            <option value="Bulgur">Bulgur</option>
+            <option value="Butter">Butter</option>
+            <option value="Buttermilk">Buttermilk</option>
+            <option value="Buttermilk powder">Buttermilk powder</option>
+            <option value="Cacao nibs">Cacao nibs</option>
+            <option value="Cake Enhancer">Cake Enhancer</option>
+            <option value="Candied peel">Candied peel</option>
+            <option value="Caramel (14-16 individual pieces, 1in squares)">Caramel (14-16 individual pieces, 1in squares)</option>
+            <option value="Caramel bits (chopped Heath or toffee)">Caramel bits (chopped Heath or toffee)</option>
+            <option value="Caraway seeds">Caraway seeds</option>
+            <option value="Carrots (cooked and puréed)">Carrots (cooked and puréed)</option>
+            <option value="Carrots (diced)">Carrots (diced)</option>
+            <option value="Carrots (grated)">Carrots (grated)</option>
+            <option value="Cashews (chopped)">Cashews (chopped)</option>
+            <option value="Cashews (whole)">Cashews (whole)</option>
+            <option value="Celery (diced)">Celery (diced)</option>
+            <option value="Cheese (Feta)">Cheese (Feta)</option>
+            <option value="Cheese (grated cheddar, jack, mozzarella, or Swiss)">Cheese (grated cheddar, jack, mozzarella, or Swiss)</option>
+            <option value="Cheese (grated Parmesan)">Cheese (grated Parmesan)</option>
+            <option value="Cheese (Ricotta)">Cheese (Ricotta)</option>
+            <option value="Cherries (candied)">Cherries (candied)</option>
+            <option value="Cherries (dried)">Cherries (dried)</option>
+            <option value="Cherries (fresh, pitted, chopped)">Cherries (fresh, pitted, chopped)</option>
+            <option value="Cherries (frozen)">Cherries (frozen)</option>
+            <option value="Cherry Concentrate">Cherry Concentrate</option>
+            <option value="Chickpea flour">Chickpea flour</option>
+            <option value="Chives (fresh)">Chives (fresh)</option>
+            <option value="Chocolate (chopped)">Chocolate (chopped)</option>
+            <option value="Chocolate Chips">Chocolate Chips</option>
+            <option value="Chocolate Chunks">Chocolate Chunks</option>
+            <option value="Cinnamon Sweet Bits">Cinnamon Sweet Bits</option>
+            <option value="Cinnamon-Sugar">Cinnamon-Sugar</option>
+            <option value="Cocoa (unsweetened)">Cocoa (unsweetened)</option>
+            <option value="Coconut (sweetened, shredded)">Coconut (sweetened, shredded)</option>
+            <option value="Coconut (toasted)">Coconut (toasted)</option>
+            <option value="Coconut (unsweetened, desiccated)">Coconut (unsweetened, desiccated)</option>
+            <option value="Coconut (unsweetened, large flakes)">Coconut (unsweetened, large flakes)</option>
+            <option value="Coconut (unsweetened, shredded)">Coconut (unsweetened, shredded)</option>
+            <option value="Coconut Flour">Coconut Flour</option>
+            <option value="Coconut Milk Powder">Coconut Milk Powder</option>
+            <option value="Coconut oil">Coconut oil</option>
+            <option value="Coconut sugar">Coconut sugar</option>
+            <option value="Confectioners' sugar (unsifted)">Confectioners' sugar (unsifted)</option>
+            <option value="Cookie crumbs">Cookie crumbs</option>
+            <option value="Corn (popped)">Corn (popped)</option>
+            <option value="Corn syrup">Corn syrup</option>
+            <option value="Cornmeal (whole)">Cornmeal (whole)</option>
+            <option value="Cornmeal (yellow, Quaker)">Cornmeal (yellow, Quaker)</option>
+            <option value="Cornstarch">Cornstarch</option>
+            <option value="Cracked wheat">Cracked wheat</option>
+            <option value="Cranberries (dried)">Cranberries (dried)</option>
+            <option value="Cranberries (fresh or frozen)">Cranberries (fresh or frozen)</option>
+            <option value="Cream (heavy cream, light cream, or half & half)">Cream (heavy cream, light cream, or half & half)</option>
+            <option value="Cream cheese">Cream cheese</option>
+            <option value="Crystallized ginger">Crystallized ginger</option>
+            <option value="Currants">Currants</option>
+            <option value="Dates (chopped)">Dates (chopped)</option>
+            <option value="Demerara sugar">Demerara sugar</option>
+            <option value="Dried Blueberry Powder">Dried Blueberry Powder</option>
+            <option value="Dried milk (Baker's Special Dry Milk)">Dried milk (Baker's Special Dry Milk)</option>
+            <option value="Dried nonfat milk (powdered)">Dried nonfat milk (powdered)</option>
+            <option value="Dried potato flakes (instant mashed potatoes)">Dried potato flakes (instant mashed potatoes)</option>
+            <option value="Dried whole milk (powdered)">Dried whole milk (powdered)</option>
+            <option value="Durum Flour">Durum Flour</option>
+            <option value="Easy Roll Dough Improver">Easy Roll Dough Improver</option>
+            <option value="Egg (fresh)">Egg (fresh)</option>
+            <option value="Egg white (fresh)">Egg white (fresh)</option>
+            <option value="Egg whites (dried)">Egg whites (dried)</option>
+            <option value="Egg yolk (fresh)">Egg yolk (fresh)</option>
+            <option value="Espresso Powder">Espresso Powder</option>
+            <option value="Everything Bagel Topping">Everything Bagel Topping</option>
+            <option value="Figs (dried, chopped)">Figs (dried, chopped)</option>
+            <option value="First Clear Flour">First Clear Flour</option>
+            <option value="Flax meal">Flax meal</option>
+            <option value="Flaxseed">Flaxseed</option>
+            <option value="French-Style Flour">French-Style Flour</option>
+            <option value="Fruitcake Fruit Blend">Fruitcake Fruit Blend</option>
+            <option value="Garlic (cloves, in skin for roasting)">Garlic (cloves, in skin for roasting)</option>
+            <option value="Garlic (minced)">Garlic (minced)</option>
+            <option value="Garlic (peeled and sliced)">Garlic (peeled and sliced)</option>
+            <option value="Ginger (fresh, sliced)">Ginger (fresh, sliced)</option>
+            <option value="Gluten-Free All-Purpose Baking Mix">Gluten-Free All-Purpose Baking Mix</option>
+            <option value="Gluten-Free All-Purpose Flour">Gluten-Free All-Purpose Flour</option>
+            <option value="Gluten-Free Measure for Measure Flour">Gluten-Free Measure for Measure Flour</option>
+            <option value="Graham cracker crumbs (boxed)">Graham cracker crumbs (boxed)</option>
+            <option value="Graham crackers (crushed)">Graham crackers (crushed)</option>
+            <option value="Granola">Granola</option>
+            <option value="Grape Nuts">Grape Nuts</option>
+            <option value="Harvest Grains Blend">Harvest Grains Blend</option>
+            <option value="Hazelnut flour">Hazelnut flour</option>
+            <option value="Hazelnut Praline Paste">Hazelnut Praline Paste</option>
+            <option value="Hazelnut spread">Hazelnut spread</option>
+            <option value="Hazelnuts (whole)">Hazelnuts (whole)</option>
+            <option value="Hi-Maize Natural Fiber">Hi-Maize Natural Fiber</option>
+            <option value="High-Gluten Flour">High-Gluten Flour</option>
+            <option value="Honey">Honey</option>
+            <option value="Instant ClearJel">Instant ClearJel</option>
+            <option value="Irish-Style Flour">Irish-Style Flour</option>
+            <option value="Italian-Style Flour">Italian-Style Flour</option>
+            <option value="Jam or preserves">Jam or preserves</option>
+            <option value="Jammy Bits">Jammy Bits</option>
+            <option value="Keto Wheat Flour">Keto Wheat Flour</option>
+            <option value="Key Lime Juice">Key Lime Juice</option>
+            <option value="Lard">Lard</option>
+            <option value="Leeks (diced)">Leeks (diced)</option>
+            <option value="Lemon Juice Powder">Lemon Juice Powder</option>
+            <option value="Lime Juice Powder">Lime Juice Powder</option>
+            <option value="Macadamia nuts (whole)">Macadamia nuts (whole)</option>
+            <option value="Malt syrup">Malt syrup</option>
+            <option value="Malted Milk Powder">Malted Milk Powder</option>
+            <option value="Malted Wheat Flakes">Malted Wheat Flakes</option>
+            <option value="Maple sugar">Maple sugar</option>
+            <option value="Maple syrup">Maple syrup</option>
+            <option value="Marshmallow crème">Marshmallow crème</option>
+            <option value="Marshmallow Fluff®">Marshmallow Fluff®</option>
+            <option value="Marshmallows (mini)">Marshmallows (mini)</option>
+            <option value="Marzipan">Marzipan</option>
+            <option value="Mascarpone cheese">Mascarpone cheese</option>
+            <option value="Mashed potatoes">Mashed potatoes</option>
+            <option value="Mayonnaise">Mayonnaise</option>
+            <option value="Medium Rye Flour">Medium Rye Flour</option>
+            <option value="Meringue powder">Meringue powder</option>
+            <option value="Milk (evaporated)">Milk (evaporated)</option>
+            <option value="Milk (fresh)">Milk (fresh)</option>
+            <option value="Millet (whole)">Millet (whole)</option>
+            <option value="Mini chocolate chips">Mini chocolate chips</option>
+            <option value="Molasses">Molasses</option>
+            <option value="Mushrooms (sliced)">Mushrooms (sliced)</option>
+            <option value="Non-Diastatic Malt Powder">Non-Diastatic Malt Powder</option>
+            <option value="Oat bran">Oat bran</option>
+            <option value="Oat flour">Oat flour</option>
+            <option value="Oats (old-fashioned or quick-cooking)">Oats (old-fashioned or quick-cooking)</option>
+            <option value="Olive oil">Olive oil</option>
+            <option value="Olives (sliced)">Olives (sliced)</option>
+            <option value="Onions (fresh, diced)">Onions (fresh, diced)</option>
+            <option value="Paleo Baking Flour">Paleo Baking Flour</option>
+            <option value="Palm shortening">Palm shortening</option>
+            <option value="Passion fruit purée ">Passion fruit purée </option>
+            <option value="Pasta Flour Blend">Pasta Flour Blend</option>
+            <option value="Pastry Flour">Pastry Flour</option>
+            <option value="Pastry Flour Blend">Pastry Flour Blend</option>
+            <option value="Peaches (peeled and diced)">Peaches (peeled and diced)</option>
+            <option value="Peanut butter">Peanut butter</option>
+            <option value="Peanuts (whole, shelled)">Peanuts (whole, shelled)</option>
+            <option value="Pears (peeled and diced)">Pears (peeled and diced)</option>
+            <option value="Pecan Meal">Pecan Meal</option>
+            <option value="Pecans (diced)">Pecans (diced)</option>
+            <option value="Pie Filling Enhancer">Pie Filling Enhancer</option>
+            <option value="Pine nuts">Pine nuts</option>
+            <option value="Pineapple (dried)">Pineapple (dried)</option>
+            <option value="Pineapple (fresh or canned, diced)">Pineapple (fresh or canned, diced)</option>
+            <option value="Pistachio nuts (shelled)">Pistachio nuts (shelled)</option>
+            <option value="Pistachio Paste">Pistachio Paste</option>
+            <option value="Pizza Dough Flavor">Pizza Dough Flavor</option>
+            <option value="Pizza Flour">Pizza Flour</option>
+            <option value="Pizza Flour Blend">Pizza Flour Blend</option>
+            <option value="Polenta (coarse ground cornmeal)">Polenta (coarse ground cornmeal)</option>
+            <option value="Poppy seeds">Poppy seeds</option>
+            <option value="Potato Flour">Potato Flour</option>
+            <option value="Potato starch">Potato starch</option>
+            <option value="Pumpernickel Flour">Pumpernickel Flour</option>
+            <option value="Pumpkin purée ">Pumpkin purée </option>
+            <option value="Quinoa (cooked)">Quinoa (cooked)</option>
+            <option value="Quinoa (whole)">Quinoa (whole)</option>
+            <option value="Quinoa flour">Quinoa flour</option>
+            <option value="Raisins (loose)">Raisins (loose)</option>
+            <option value="Raisins (packed)">Raisins (packed)</option>
+            <option value="Raspberries (fresh)">Raspberries (fresh)</option>
+            <option value="Rhubarb (sliced, 1/2in slices)">Rhubarb (sliced, 1/2in slices)</option>
+            <option value="Rice (long grain, dry)">Rice (long grain, dry)</option>
+            <option value="Rice flour (white)">Rice flour (white)</option>
+            <option value="Rice Krispies">Rice Krispies</option>
+            <option value="Rye Bread Improver">Rye Bread Improver</option>
+            <option value="Rye Chops">Rye Chops</option>
+            <option value="Rye flakes">Rye flakes</option>
+            <option value="Rye Flour Blend">Rye Flour Blend</option>
+            <option value="Salt (Kosher, Diamond Crystal)">Salt (Kosher, Diamond Crystal)</option>
+            <option value="Salt (Kosher, Morton's)">Salt (Kosher, Morton's)</option>
+            <option value="Salt (table)">Salt (table)</option>
+            <option value="Scallions (sliced)">Scallions (sliced)</option>
+            <option value="Self-Rising Flour">Self-Rising Flour</option>
+            <option value="Semolina Flour">Semolina Flour</option>
+            <option value="Sesame seeds">Sesame seeds</option>
+            <option value="Shallots (peeled and sliced)">Shallots (peeled and sliced)</option>
+            <option value="Six-Grain Blend">Six-Grain Blend</option>
+            <option value="Sorghum flour">Sorghum flour</option>
+            <option value="Sour cream">Sour cream</option>
+            <option value="Sourdough starter">Sourdough starter</option>
+            <option value="Soy flour">Soy flour</option>
+            <option value="Sparkling Sugar">Sparkling Sugar</option>
+            <option value="Spelt Flour">Spelt Flour</option>
+            <option value="Sprouted Wheat Flour">Sprouted Wheat Flour</option>
+            <option value="Steel cut oats">Steel cut oats</option>
+            <option value="Sticky Bun Sugar">Sticky Bun Sugar</option>
+            <option value="Strawberries (fresh sliced)">Strawberries (fresh sliced)</option>
+            <option value="Sugar (granulated white)">Sugar (granulated white)</option>
+            <option value="Sugar substitute (Splenda)">Sugar substitute (Splenda)</option>
+            <option value="Sundried tomatoes (dry pack)">Sundried tomatoes (dry pack)</option>
+            <option value="Sunflower seeds">Sunflower seeds</option>
+            <option value="Super 10 Blend">Super 10 Blend</option>
+            <option value="Sweet Ground Chocolate and Cocoa Blend">Sweet Ground Chocolate and Cocoa Blend</option>
+            <option value="Sweetened condensed milk">Sweetened condensed milk</option>
+            <option value="Tahini paste">Tahini paste</option>
+            <option value="Tapioca starch or flour">Tapioca starch or flour</option>
+            <option value="Tapioca (quick cooking)">Tapioca (quick cooking)</option>
+            <option value="Teff flour">Teff flour</option>
+            <option value="The Works Bread Topping">The Works Bread Topping</option>
+            <option value="Toasted Almond Flour">Toasted Almond Flour</option>
+            <option value="Toffee chunks">Toffee chunks</option>
+            <option value="Tropical Fruit Blend">Tropical Fruit Blend</option>
+            <option value="Turbinado sugar (raw)">Turbinado sugar (raw)</option>
+            <option value="Unbleached Cake Flour">Unbleached Cake Flour</option>
+            <option value="Vanilla Extract ">Vanilla Extract </option>
+            <option value="Vegetable oil">Vegetable oil</option>
+            <option value="Vegetable shortening">Vegetable shortening</option>
+            <option value="Vermont Cheese Powder">Vermont Cheese Powder</option>
+            <option value="Vital Wheat Gluten">Vital Wheat Gluten</option>
+            <option value="Walnuts (chopped)">Walnuts (chopped)</option>
+            <option value="Walnuts (whole)">Walnuts (whole)</option>
+            <option value="Wheat berries (red)">Wheat berries (red)</option>
+            <option value="Wheat bran">Wheat bran</option>
+            <option value="Wheat germ">Wheat germ</option>
+            <option value="White Chocolate Chips">White Chocolate Chips</option>
+            <option value="White Rye Flour">White Rye Flour</option>
+            <option value="White Whole Wheat Flour">White Whole Wheat Flour</option>
+            <option value="Whole Grain Flour Blend">Whole Grain Flour Blend</option>
+            <option value="Whole Wheat Flour (Premium 100%)">Whole Wheat Flour (Premium 100%)</option>
+            <option value="Whole Wheat Pastry Flour / Graham Flour">Whole Wheat Pastry Flour / Graham Flour</option>
+            <option value="Yeast (instant)">Yeast (instant)</option>
+            <option value="Yogurt">Yogurt</option>
+            <option value="Zucchini (shredded)">Zucchini (shredded)</option>
+          </select>
+        </label>
 
-      <label for="base-amount"><strong>Convert from:</strong></label>
-      <input id="base-amount"
-             name="base_amount"
-             type="text"
-             value="1"
-             pattern="^[0-9]*$|^[0-9]*\.[0-9]*$|^[0-9]*\/[0-9]*$"
-             oninvalid="
-                this.setCustomValidity('Please enter a number or fraction.');
-                this.setAttribute('aria-invalid', 'true');
-                "
-             oninput="
-                this.setCustomValidity('');
-                this.removeAttribute('aria-invalid');
-                "
-             required>
+        <label for="base-amount"><strong>Convert from:</strong></label>
+        <p class="grouped">
+          <input id="base-amount" name="base_amount" type="text" value="8"
+                 pattern="^[0-9]*$|^[0-9]*\.[0-9]*$|^[0-9]*\/[0-9]*$"
+                 oninvalid="this.setCustomValidity('Please enter a number or fraction.');
+                              this.setAttribute('aria-invalid', 'true');"
+                 oninput="this.setCustomValidity(''); this.removeAttribute('aria-invalid');"
+                 required>
+          <select id="base-unit-select" name="base_unit">
+            <option value="oz" selected>oz</option>
+            <option value="gram">gram</option>
+            <option value="floz">floz</option>
+            <option value="cup">cup</option>
+            <option value="tsp">tsp</option>
+            <option value="tbsp">tbsp</option>
+          </select>
+        </p>
 
-      <select id="base-unit-select" name="base_unit">
-        <option value="oz" selected>oz</option>
-        <option value="gram">gram</option>
-        <option value="floz">floz</option>
-        <option value="cup">cup</option>
-        <option value="tsp">tsp</option>
-        <option value="tbsp">tbsp</option>
-      </select>
+        <div class="row">
+          <div class="col">
+            <label for="to-unit-select"><strong>Convert to:</strong>
+              <select id="to-unit-select" name="to_unit">
+                <option value="oz" selected>oz</option>
+                <option value="gram">gram</option>
+                <option value="floz">floz</option>
+                <option value="cup">cup</option>
+                <option value="tsp">tsp</option>
+                <option value="tbsp">tbsp</option>
+              </select>
+            </label>
+          </div>
+          <div class="col">
+            <label for="multiplier"><strong>Multiply by:</strong>
+              <input id="multiplier" name="multipler" type="number" min="0.1" step="0.1" value="1" required>
+            </label>
+          </div>
+        </div>
+      </form>
+      <footer class="is-right">
+        <input type="submit" form="convertForm" value="Convert">
+      </footer>
+    </article>
 
-      <label for="to-unit-select"><strong>Convert to:</strong>
-        <select id="to-unit-select" name="to_unit">
-          <option value="oz" selected>oz</option>
-          <option value="gram">gram</option>
-          <option value="floz">floz</option>
-          <option value="cup">cup</option>
-          <option value="tsp">tsp</option>
-          <option value="tbsp">tbsp</option>
-        </select>
-      </label>
-
-      <label for="multiplier"><strong>Multiply by:</strong>
-        <input id="multiplier" name="multipler" type="number" min="0.1" step="0.1" value="1" required>
-      </label>
-
-      <span class="feedback">
-      <button id="convert-btn" name="convert_btn" class="button primary" aria-busy="false">
-        <strong>Convert</strong>
-      </button>
-    </span>
-
-    </form>
-
-    <input id="new-amount" type="text" placeholder="-" readonly>
-
-  </article>
+  </div>
 </main>
+<script>
+ window.addEventListener( "load", function () {
+  function sendData() {
+    const XHR = new XMLHttpRequest();
+
+    // Bind the FormData object and the form element
+    const FD = new FormData( form );
+
+    // Define what happens on successful data submission
+    XHR.addEventListener( "load", function(event) {
+      alert( event.target.responseText );
+    } );
+
+    // Define what happens in case of error
+    XHR.addEventListener( "error", function( event ) {
+      alert( 'Oops! Something went wrong.' );
+    } );
+
+    // Set up our request
+    XHR.open( "POST", "https://example.com/cors.php" );
+
+    // The data sent is what the user provided in the form
+    XHR.send( FD );
+  }
+
+  // Access the form element...
+  const form = document.getElementById( "myForm" );
+
+  // ...and take over its submit event.
+  form.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+
+    sendData();
+  } );
+} );
+</script>
 </body>
 </html>
