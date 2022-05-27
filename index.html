@@ -40,7 +40,7 @@
       </header>
 
       <form id="convertForm"
-        action="https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-ebca009b-bebb-49c4-83df-cf0b798f1ad6/calculator/convert"
+        action="#"
         method="POST">
 
         <label for="context"><strong>Ingredient type:</strong></label>
@@ -374,7 +374,19 @@
   </main>
 
   <script>
-  // fetch goes here
+    const convert_url = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-ebca009b-bebb-49c4-83df-cf0b798f1ad6/calculator/convert";
+
+    function request_conversion( data ) {
+      // fetch goes here
+      console.log("Sending Request")
+    }
+
+    addEventListener("submit", (evt) => {
+      if (evt.target.method.toLowerCase() === "post") {
+        evt.preventDefault();
+        alert("Form submit intercepted.")
+      }
+    });
   </script>
 </body>
 </html>
