@@ -1,7 +1,7 @@
 {
-  "context":  "All-Purpose Flour",
-  "amount": 8,
-  "from_unit": "oz",
-  "to_unit": "g",
-  "multiplier": 1
+  "context":  "Water (default)",
+  "amount": "1",
+  "from_unit": "cup",
+  "to_unit": "oz",
+  "multiplier": "1"
 }
