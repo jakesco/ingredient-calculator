@@ -35,12 +35,8 @@
   <main class="container">
 
     <article class="card" aria-label="Unit conversion calculator.">
-      <header>
-        <h2>Mass/Volume Calculator</h2>
-      </header>
-
+      <h2>Mass/Volume Calculator</h2>
       <form id="convertForm">
-
         <label for="context"><strong>Ingredient type:</strong></label>
         <select id="context" name="context">
           <option value="Water (default)" selected>Water (default)</option>
@@ -328,7 +324,7 @@
 
         <label for="amount"><strong>Convert from:</strong></label>
         <div class="grid">
-          <input id="amount" name="amount" type="text" value="8"
+          <input id="amount" name="amount" type="text" value="1"
                  pattern="^[0-9]*$|^[0-9]*\.[0-9]*$|^[0-9]*\/[0-9]*$"
                  oninvalid="this.setCustomValidity('Please enter a number or fraction.');
                             this.setAttribute('aria-invalid', 'true');"
@@ -336,10 +332,10 @@
                  required>
 
           <select id="fromUnitSelect" name="from_unit">
-            <option value="oz" selected>oz</option>
+            <option value="oz">oz</option>
             <option value="gram">gram</option>
             <option value="floz">floz</option>
-            <option value="cup">cup</option>
+            <option value="cup" selected>cup</option>
             <option value="tsp">tsp</option>
             <option value="tbsp">tbsp</option>
           </select>
@@ -362,21 +358,38 @@
           </label>
         </div>
 
-        <input type="submit" form="convertForm" value="Convert">
+        <hr>
+        <div class="grid">
+          <button id="submitBtn" aria-busy="false" type="submit">Convert</button>
+          <input id="result" type="text" value="-" readonly>
+        </div>
       </form>
-
-      <footer>
-        <input id="result" type="text" value="-" readonly>
-      </footer>
     </article>
   </main>
 
   <script>
     const convert_url = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-ebca009b-bebb-49c4-83df-cf0b798f1ad6/calculator/convert";
 
+    const btn = document.getElementById('submitBtn')
     const result = document.getElementById('result')
 
+    addEventListener("submit", (evt) => {
+      evt.preventDefault();
+      request_conversion();
+    });
+
+    function disable_button() {
+      btn.disabled = true;
+      btn.setAttribute("aria-busy", "true");
+    }
+
+    function enable_button() {
+      btn.disabled = false;
+      btn.setAttribute("aria-busy", "false");
+    }
+
     function request_conversion() {
+      disable_button();
       let form = document.getElementById('convertForm');
       let formData = new FormData(form);
 
@@ -389,16 +402,11 @@
 
       fetch(request_url)
               .then(response => response.text())
-              .then(data => result.value = data)
+              .then(data => {result.value = data; enable_button();})
               .catch((error) => {
                 console.error('Error:', error);
               });
     }
-
-    addEventListener("submit", (evt) => {
-        evt.preventDefault();
-        request_conversion();
-    });
   </script>
 </body>
 </html>
