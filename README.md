@@ -8,8 +8,7 @@ but when scaling up recipes it's often more desirable use weight to determine in
 
 The ingredient conversion function is implemented in Python and hosted on 
 [Digital Ocean's Function platform](https://cloud.digitalocean.com/functions/). 
-
-The function is invoked using the Javascript `fetch` api. 
+The function is then invoked using the Javascript `fetch` api. 
 
 To deploy this function, ensure you have `doctl` installed and connected to your Digital Ocean account.
 See [Digital Ocean Function Quickstart](https://docs.digitalocean.com/products/functions/quickstart/) for details.
