@@ -8,7 +8,7 @@ from pint import Context, UnitRegistry
 def main(args):
     # Parse request
     if not (request := Request.from_json(args)):
-        return {"conversion": "-"}
+        return {"body": "-"}
 
     # Initialize unit registry
     ureg = UnitRegistry()
@@ -22,7 +22,7 @@ def main(args):
         request.to_unit, request.name
     )
 
-    return {"conversion": f"{float(conversion.magnitude):.3f} {conversion.units}(s)"}
+    return {"body": f"{float(conversion.magnitude):.3f} {conversion.units}(s)"}
 
 
 @dataclass(frozen=True)
@@ -54,9 +54,11 @@ class Request:
     @classmethod
     def from_json(cls, args):
         try:
+            ctx: str = args.get("context")
+            ctx = ctx.replace("+", " ")
             return cls(
                 name=args.get("context"),
-                context=CONTEXTS[args.get("context")],
+                context=CONTEXTS[ctx],
                 amount=Fraction(args.get("amount")),
                 from_unit=args.get("from_unit"),
                 to_unit=args.get("to_unit"),

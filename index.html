@@ -39,13 +39,11 @@
         <h2>Mass/Volume Calculator</h2>
       </header>
 
-      <form id="convertForm"
-        action="#"
-        method="POST">
+      <form id="convertForm">
 
         <label for="context"><strong>Ingredient type:</strong></label>
         <select id="context" name="context">
-          <option value="Water (contexts)" selected>Water (contexts)</option>
+          <option value="Water (default)" selected>Water (default)</option>
           <option value="All-Purpose Flour">All-Purpose Flour</option>
           <option value="Almond Flour">Almond Flour</option>
           <option value="Almond meal">Almond meal</option>
@@ -376,16 +374,30 @@
   <script>
     const convert_url = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-ebca009b-bebb-49c4-83df-cf0b798f1ad6/calculator/convert";
 
-    function request_conversion( data ) {
-      // fetch goes here
-      console.log("Sending Request")
+    const result = document.getElementById('result')
+
+    function request_conversion() {
+      let form = document.getElementById('convertForm');
+      let formData = new FormData(form);
+
+      let request_url = convert_url
+      let query_string = '?'
+      for (let [key, value] of formData) {
+        query_string = query_string.concat(`${key}=${value}&`);
+      }
+      request_url = request_url.concat(query_string.slice(0, -1))
+
+      fetch(request_url)
+              .then(response => response.text())
+              .then(data => result.value = data)
+              .catch((error) => {
+                console.error('Error:', error);
+              });
     }
 
     addEventListener("submit", (evt) => {
-      if (evt.target.method.toLowerCase() === "post") {
         evt.preventDefault();
-        alert("Form submit intercepted.")
-      }
+        request_conversion();
     });
   </script>
 </body>
