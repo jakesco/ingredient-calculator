@@ -12,6 +12,6 @@ deploy:
 	doctl serverless deploy . --remote-build
 
 undeploy:
-	doctl serverless undeploy --all
+	doctl serverless undeploy calculator/convert
 
 .PHONY: all fmt init deploy undeploy
